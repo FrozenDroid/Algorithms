@@ -3,5 +3,11 @@ project(Algorithms)
 
 set(CMAKE_C_STANDARD 99)
 
-set(SOURCE_FILES main.c)
-add_executable(Algorithms ${SOURCE_FILES})
+set(SORTING_DIR Sorting/)
+set(
+        SOURCE_FILES
+        Sorting/random_intarray_generator.h
+        Sorting/random_intarray_generator.c
+)
+add_executable(Algorithms main.c ${SOURCE_FILES})
+add_executable(quicksort Sorting/Quicksort/quicksort.c ${SOURCE_FILES})
